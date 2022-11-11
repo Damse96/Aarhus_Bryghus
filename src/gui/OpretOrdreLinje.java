@@ -1,7 +1,6 @@
 package gui;
 
 import controller.Controller;
-import javafx.application.Application;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.VPos;
@@ -14,11 +13,9 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import model.OrdreLinje;
-import model.ProcentRabat;
 import model.Produkt;
 import model.ProduktKategori;
 import model.ProduktMedPant;
-import storage.Storage;
 
 public class OpretOrdreLinje extends Stage {
 
@@ -227,7 +224,7 @@ public class OpretOrdreLinje extends Stage {
                 txfAntal.clear();
                 txfSamletPris.clear();
             }
-            txfSamletPris.setText("" + Controller.SamletOrdrePris());
+            txfSamletPris.setText("" + Controller.samletOrdrePris());
         }
     }
 

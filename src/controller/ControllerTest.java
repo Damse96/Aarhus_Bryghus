@@ -1,12 +1,11 @@
 package controller;
 
-import model.Pris;
 import model.Produkt;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import storage.Storage;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ControllerTest {
     private Storage storage;
@@ -74,7 +73,7 @@ class ControllerTest {
         s3.setPantPris(100);
 
         //Act
-        double actualResult = Controller.SamletPantPris();
+        double actualResult = Controller.samletPantPris();
 
         //Assert
         assertEquals(250, actualResult);
@@ -90,7 +89,7 @@ class ControllerTest {
         s2.setPantPris(50);
         s3.setPantPris(150);
         //Act
-        double actualResult = Controller.SamletPantPris();
+        double actualResult = Controller.samletPantPris();
 
         //Assert
         assertEquals(400, actualResult);
@@ -107,7 +106,7 @@ class ControllerTest {
         s3.setPantPris(250);
 
         //Act
-        double actualResult = Controller.SamletPantPris();
+        double actualResult = Controller.samletPantPris();
 
         //Assert
         assertEquals(460, actualResult);
