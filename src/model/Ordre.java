@@ -9,7 +9,6 @@ public class Ordre implements Serializable {
     private LocalDate dato;
     Kunde kunde;
     private String status;
-    Rabat rabat;
     Salg salg;
 
     public Ordre(int antal, double samletPris, LocalDate dato, Kunde kunde, String status) {
@@ -58,10 +57,6 @@ public class Ordre implements Serializable {
 
     public void setStatus(String status) {
         this.status = status;
-    }
-
-    public void setRabat(Rabat rabat) {
-        this.rabat = rabat;
     }
 
     public void setSalg(Salg salg) {

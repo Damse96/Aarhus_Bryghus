@@ -6,20 +6,24 @@ import java.util.ArrayList;
 
 public class Produkt implements Serializable {
     private String navn;
-    private int pris;
-
-
-    private double PantPris;
+    private double pantPris;
     private final ArrayList<Pris> priser = new ArrayList<>();
     private final ArrayList<OrdreLinje> ordreLinjer = new ArrayList<>();
     private ProduktKategori produktKategori;
+    private ProduktMedPant produktMedPant;
+    private final ArrayList<Rundvisning>rundvisninger = new ArrayList<>();
+
+    public Produkt(String navn) {
+        this.navn = navn;
+        this.produktKategori = produktKategori;
+    }
 
     public double getPantPris() {
-        return PantPris;
+        return pantPris;
     }
 
     public void setPantPris(double pantPris) {
-        PantPris = pantPris;
+        this.pantPris = pantPris;
     }
 
     public ProduktMedPant getProduktMedPant() {
@@ -28,15 +32,6 @@ public class Produkt implements Serializable {
 
     public void setProduktMedPant(ProduktMedPant produktMedPant) {
         this.produktMedPant = produktMedPant;
-    }
-
-    private ProduktMedPant produktMedPant;
-
-
-    public Produkt(String navn) {
-        this.navn = navn;
-        this.produktKategori = produktKategori;
-//        this.antal = antal;
     }
 
     public ArrayList <OrdreLinje> getOrdreLinjer() {
@@ -51,22 +46,9 @@ public class Produkt implements Serializable {
         this.produktKategori = produktKategori;
     }
 
-    public int getPris() {
-        return pris;
-    }
-
-    public void setPris(int pris) {
-        this.pris = pris;
-    }
-
-    private final ArrayList<Rundvisning>rundvisninger = new ArrayList<>();
-
-
     public ArrayList<Rundvisning>getRundvisninger(){
         return new ArrayList<>(rundvisninger);
     }
-
-
 
     public Rundvisning CreateRundvisning(String navn, int antalDeltagelser, LocalDateTime dato) {
         Rundvisning rundvisning = new Rundvisning(dato,antalDeltagelser, navn);

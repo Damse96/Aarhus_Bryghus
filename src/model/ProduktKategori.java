@@ -7,20 +7,20 @@ public class ProduktKategori implements Serializable {
     private String navn;
     private final ArrayList<Produkt> produkter = new ArrayList<>();
 
-    public ArrayList<Produkt>getProdukter(){
-        return new ArrayList<>(produkter);
+    public ProduktKategori(String navn) {
+        this.navn = navn;
     }
 
     public void addProdukt(Produkt produkt){
-    produkter.add(produkt);
+        produkter.add(produkt);
     }
 
     public void removeProdukt(Produkt produkt){
         produkter.remove(produkt);
     }
 
-    public ProduktKategori(String navn) {
-        this.navn = navn;
+    public ArrayList<Produkt>getProdukter(){
+        return new ArrayList<>(produkter);
     }
 
     public String getNavn() {

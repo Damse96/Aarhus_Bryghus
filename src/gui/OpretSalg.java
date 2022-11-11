@@ -9,7 +9,6 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import model.Observer;
 import model.OrdreLinje;
 import model.Produkt;
 
